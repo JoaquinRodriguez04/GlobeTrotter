@@ -196,6 +196,7 @@ body h2{
 /* estilizando el input_box > inputs_container > search_container > hero_container > hero */
 .inputs_container .input_box{
    margin-right: 12px;
+   width: 100%;
 }
 
 /* estilizando el h2 > input_box > inputs_container > search_container > hero_container > hero */
@@ -205,19 +206,19 @@ body h2{
     color: var(--color-secondary);
 }
 
+.inputs_container .select_box{
+    display: flex;
+    width: 100%;
+}
+
+.inputs_container .date{
+    width: 50%;
+}
 
 /* estilizando el input > input_box > inputs_container > search_container > hero_container > hero */
 .inputs_container .input_box > select {
     padding: 20px 10px;
-    margin-top: 8px;
-    background-color: var(--color-terciary);
-    outline: none;
-    border-radius: 8px;
-    border: 1px solid #22222265;
-}
-
-.inputs_container .input_box > input {
-    padding: 20px 50px;
+    width: 100%;
     margin-top: 8px;
     background-color: var(--color-terciary);
     outline: none;
@@ -238,6 +239,7 @@ body h2{
 /* estilizando el button > button_box > inputs_container > search_container > hero_container > hero */
 .inputs_container .button_box > button{
     padding: 25px 80px;
+    width: 100%;
     margin-top: 8px;
     border-radius: 10px;
     border: none;
@@ -274,55 +276,59 @@ body h2{
         width: 80%;
     }
 
-    .inputs_container .button_box > button{
-        padding: 16px 50px;
-    }
-
-    .inputs_container .input_box > input {
-        padding: 16px 40px;
-
-    }
 }
 
+@media screen and (max-width:1665px) {
+    .inputs_container .button_box{
+        margin-left: 10px;
+    }
+
+}
 
 @media screen and (max-width:1360px) {
-    .inputs_container{
-        width: 100%;
-    }
-
     .texts_container > h2{
         font-size: 60px;
-        width: 75%;
-  
+        width: 75%;  
     }
 
-    .inputs_container .button_box{
-       margin-left: 40px;
-    }
-
-    .inputs_container .button_box > button{
-        padding: 16px 40px;
-    }
-
-    .inputs_container .input_box > input {
-        padding: 16px 40px;
-
-    }
 }
 
-@media screen and (max-width:1236px) {
+@media screen and (max-width:1360px) {
 
-    .inputs_container .button_box > button{
+    
+    .inputs_container{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: start;
+    }
+    
+    .inputs_container .select_box{
+        display: flex;
+    }
+
+    .inputs_container .input_box{
+        /* width: 100%; */
+    }
+    
+    .inputs_container .date{
+        width: 50%;
+    }
+
+}
+
+/* @media screen and (max-width:1236px) { */
+
+    /* .inputs_container .button_box > button{
         padding: 16px 35px;
     }
 
     .inputs_container .input_box > input {
         padding: 16px 20px;
 
-    }
-}
+    } */
+/* } */
 
-@media screen and (max-width:1106px) {
+/* @media screen and (max-width:1106px) {
 
     .inputs_container .button_box > button{
         padding: 16px 25px;
@@ -340,9 +346,9 @@ body h2{
     .inputs_container .input_box > h2{
       font-size: 18px;
     }
-}
+} */
 
-@media screen and (max-width:1050px) {
+/* @media screen and (max-width:1050px) {
 
     .inputs_container{
         flex-wrap: wrap;
@@ -356,9 +362,9 @@ body h2{
     .inputs_container .button_box > button{
         width: 100%;
     }
-}
+} */
 
-@media screen and (max-width:1024px) {
+/* @media screen and (max-width:1024px) {
     .links_contaiener > a{
         display: none;
     }
@@ -413,7 +419,7 @@ body h2{
     .tarjets_container > .tarjet_box > a{
         font-size: 14px;
     }
-}
+} */
 
 
 /* Destinations */
@@ -573,6 +579,10 @@ body h2{
 
 /* advantajes_title */
 
+.advantajes_title{
+    margin: 50px 0;
+}
+
 .advantajes_title > p{
     color: var(--col-yellow);
     font-weight: 600;
@@ -588,6 +598,7 @@ body h2{
 
 .advantajes_content{
     display: flex;
+    align-items: center;
 }
 
 .advantages_tarjet{
@@ -628,8 +639,9 @@ body h2{
     font-size: 18px;
     font-weight: 500;
     color: var(--color-secondary-hover);
-    width: 60%;
- }
+    width: 70%;
+    margin-top: 10px;
+}
 
 .advantages_specification .btn_advantages_specification{
     background-color: var(--color-primary);
@@ -648,16 +660,18 @@ body h2{
     background-size: cover;
     background-position: center center;
     display: flex;
-   align-items: end;
-   justify-content: space-evenly;
+    align-items: end;
+    justify-content: space-evenly;
+    border: 10px solid var(--col-white);
+    border-radius: 40px;
 }
 
 .advantages_imgs_container .advantages1{
     background-image: url(imagenes/img_advantajes.jpg);
     width: 1100px;
     height: 900px;
-    border: 10px solid var(--col-white);
-    border-radius: 20px;
+    /* border: 10px solid var(--col-white);
+    border-radius: 20px; */
     z-index: 100;
 }
 
@@ -665,8 +679,8 @@ body h2{
     background-image: url(imagenes/img_advantajes.jpg);
     width: 300px;
     height: 380px;
-    border-radius: 20px;
-    border: 10px solid var(--col-white);
+    /* border-radius: 20px;
+    border: 10px solid var(--col-white); */
     position: relative;
     top: 100px;
 }
@@ -675,7 +689,7 @@ body h2{
     background-image: url(imagenes/img_advantajes\ \(3\).jpg);
     width: 300px;
     height: 380px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     position: relative;
     top: 100px;
 }
@@ -684,10 +698,67 @@ body h2{
     background-image: url(imagenes/img_advantajes\ \(4\).jpg);
     width: 300px;
     height: 380px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     position: relative;
     top: 100px; 
 }
+
+/* media queries */
+@media screen and (max-width:1725px) {
+    .advantages_imgs_container .advantages1{
+        width: 880px;
+        height: 800px;
+    }
+
+    .advantages_imgs_container .advantages2{   
+        width: 250px;
+        height: 310px;     
+    }
+    
+    .advantages_imgs_container .advantages3{
+        width: 250px;
+        height: 310px;
+    }
+    
+    .advantages_imgs_container .advantages4{
+        width: 250px;
+        height: 310px;
+    }
+}
+
+@media screen and (max-width:1459px) {
+    .advantages_imgs_container .advantages1{
+        width: 680px;
+        height: 650px;
+    }
+
+    .advantages_imgs_container .advantages2{   
+        width: 190px;
+        height: 230px;     
+    }
+    
+    .advantages_imgs_container .advantages3{
+        width: 190px;
+        height: 230px;   
+    }
+    
+    .advantages_imgs_container .advantages4{
+        width: 190px;
+        height: 230px;   
+    }
+}
+
+@media screen and (max-width:1195px) {
+    .advantajes_content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .advantages_specification .advantages_tarjet > p{
+        width: 100%;
+    }
+}
+
 
 /* fantastic_vacation */
 
@@ -701,6 +772,7 @@ body h2{
     display: flex;
     flex-direction: row;
     justify-content: end;
+    /* flex: 1; */
 }
 
 .img_vacation{
@@ -712,7 +784,7 @@ body h2{
     background-image: url(imagenes/img_fantastic_vocation\(02\).jpg);
     width: 450px;
     height: 550px;
-    border-radius: 20px;
+    border-radius: 40px;
     border: 10px solid var(--col-white);
     position: relative;
 }
@@ -721,13 +793,14 @@ body h2{
     background-image: url(imagenes/img_fantastic_vocation.jpg);
     width: 450px;
     height: 550px;
-    border-radius: 20px;
+    border-radius: 40px;
     border: 10px solid var(--col-white);
     position: relative;
     z-index: 100;
     right: 120px;
     bottom: -100px;
 }
+
 
 /* fantastic_vacation_content */
 
@@ -774,6 +847,43 @@ body h2{
 
 .counts_tarjet .count_content{  
     font-size: 25px;
+}
+
+/* media queries */
+@media screen and (max-width:1556px) {
+    .vacation1{
+        width: 410px;
+        height: 510px;
+    }
+    
+    .vacation2{
+        width: 410px;
+        height: 510px;
+    }
+}
+
+@media screen and (max-width:1396px) {
+    .vacation1{
+        width: 310px;
+        height: 410px;
+    }
+    
+    .vacation2{
+        width: 310px;
+        height: 410px;
+    }
+
+}
+
+@media screen and (max-width:1240px) {
+    .fantastic_vacation{
+        flex-direction: column;
+    }
+
+    .fantastic_vacation_img_container{
+        margin-bottom: 100px;
+    }
+ 
 }
 
 /* Tourists_container */
